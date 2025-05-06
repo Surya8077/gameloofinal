@@ -12,16 +12,12 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/Frontend/Landing.html"
+      "src": "/test",
+      "dest": "/api/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/Frontend/$1"
+      "dest": "/api/index.js"
     }
   ]
 }
