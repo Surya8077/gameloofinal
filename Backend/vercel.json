@@ -16,6 +16,10 @@
       "dest": "/api/$1"
     },
     {
+      "src": "/",
+      "dest": "/Frontend/Landing.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/Frontend/$1"
     }
