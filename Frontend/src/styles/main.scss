@@ -1,0 +1,18 @@
+// Import variables
+@use './variables.scss' as *;
+
+// Import global styles
+@use './global.scss';
+
+// Import component styles
+@use './Navbar.scss';
+@use './Footer.scss';
+
+// Import page styles
+@use './Home.scss';
+@use './Products.scss';
+@use './About.scss';
+@use './Contact.scss';
+@use './Login.scss';
+@use './Profile.scss';
+@use './Support.scss'; 

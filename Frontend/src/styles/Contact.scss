@@ -1,0 +1,198 @@
+@use './variables.scss' as *;
+@use 'sass:color';
+
+.contact-page {
+  .contact-hero {
+    background: linear-gradient(rgba($black, 0.7), rgba($black, 0.7)),
+                url('/assets/contact-hero.jpg') center/cover;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    margin-bottom: $spacing-xxl;
+
+    .contact-hero-content {
+      max-width: 800px;
+      padding: 0 $spacing-xl;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: $spacing-md;
+      }
+
+      p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-xl $spacing-xxl;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+
+    .contact-info {
+      h2 {
+        margin-bottom: $spacing-lg;
+        position: relative;
+        padding-bottom: $spacing-sm;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 3px;
+          background-color: $secondary-color;
+        }
+      }
+
+      p {
+        margin-bottom: $spacing-xl;
+        line-height: 1.8;
+      }
+
+      .contact-details {
+        margin-bottom: $spacing-xl;
+
+        .contact-item {
+          margin-bottom: $spacing-lg;
+
+          h3 {
+            color: $secondary-color;
+            margin-bottom: $spacing-sm;
+          }
+        }
+      }
+
+      .social-links {
+        h3 {
+          margin-bottom: $spacing-md;
+        }
+
+        .social-icons {
+          display: flex;
+          gap: $spacing-md;
+
+          .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: $secondary-color;
+            color: $white;
+            border-radius: $border-radius-circle;
+            transition: background-color $transition-normal;
+
+            &:hover {
+              background-color: color.adjust($secondary-color, $lightness: -10%);
+            }
+          }
+        }
+      }
+    }
+
+    .contact-form-container {
+      background-color: $white;
+      padding: $spacing-xl;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+
+      .success-message {
+        text-align: center;
+        padding: $spacing-xl;
+
+        h2 {
+          color: $secondary-color;
+          margin-bottom: $spacing-md;
+        }
+
+        p {
+          margin-bottom: $spacing-xl;
+        }
+      }
+
+      .contact-form {
+        h2 {
+          margin-bottom: $spacing-lg;
+          text-align: center;
+        }
+
+        .error-message {
+          background-color: rgba($accent-color, 0.1);
+          color: $accent-color;
+          padding: $spacing-sm;
+          border-radius: $border-radius-sm;
+          margin-bottom: $spacing-lg;
+        }
+
+        .form-group {
+          margin-bottom: $spacing-lg;
+
+          label {
+            display: block;
+            margin-bottom: $spacing-sm;
+            font-weight: 500;
+          }
+
+          input, select, textarea {
+            width: 100%;
+            padding: $spacing-sm;
+            border: 1px solid $light-gray;
+            border-radius: $border-radius-sm;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color $transition-normal;
+
+            &:focus {
+              outline: none;
+              border-color: $secondary-color;
+            }
+          }
+
+          textarea {
+            resize: vertical;
+          }
+        }
+
+        button {
+          width: 100%;
+          padding: $spacing-sm;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .contact-page {
+    .contact-hero {
+      height: 25vh;
+
+      .contact-hero-content {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: $spacing-xl;
+      padding: 0 $spacing-md $spacing-xl;
+    }
+  }
+} 

@@ -1,0 +1,57 @@
+@use './variables.scss' as *;
+
+.footer {
+  background-color: $primary-color;
+  color: $white;
+  padding: 3rem 2rem 1rem;
+  margin-top: auto;
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .footer-section {
+      h3 {
+        color: $white;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      a {
+        display: block;
+        color: rgba($white, 0.8);
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        transition: $transition-normal;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba($white, 0.1);
+    text-align: center;
+    color: rgba($white, 0.6);
+  }
+}
+
+@media (max-width: $tablet) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+    }
+  }
+} 

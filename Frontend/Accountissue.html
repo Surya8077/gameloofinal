@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Issues | Gameloo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #000000;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('Blueflame.gif') center/cover no-repeat;
+            opacity: 0.55;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .home-button {
+            background-color: transparent;
+            color: white;
+            padding: 12px 30px;
+            border: 2px solid white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .home-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 100px auto 40px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .account-card {
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .account-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .account-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .security-tips {
+            margin-top: 20px;
+        }
+
+        .security-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .security-item:before {
+            content: "•";
+            margin-right: 10px;
+            color: white;
+        }
+
+        .faq-section {
+            margin-bottom: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px 0;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .contact-support {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .contact-button {
+            background-color: transparent;
+            color: white;
+            padding: 12px 30px;
+            border: 2px solid white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 80px auto 20px;
+                padding: 20px;
+            }
+
+            .account-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="home-button" onclick="window.location.href='support.html'">Back</button>
+    </header>
+
+    <div class="main-container">
+        <h1 class="section-title">Account Support</h1>
+        <p class="section-subtitle">Get help with your account and security</p>
+
+        <div class="account-grid">
+            <div class="account-card">
+                <h3>Login Issues</h3>
+                <p>Having trouble accessing your account?</p>
+                <div class="security-tips">
+                    <div class="security-item">Check your internet connection</div>
+                    <div class="security-item">Verify your email and password</div>
+                    <div class="security-item">Try the "Forgot Password" option</div>
+                    <div class="security-item">Clear your browser cache and cookies</div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <h3>Account Security</h3>
+                <p>Keep your account safe with these tips:</p>
+                <div class="security-tips">
+                    <div class="security-item">Use a strong, unique password</div>
+                    <div class="security-item">Enable two-factor authentication</div>
+                    <div class="security-item">Regularly update your password</div>
+                    <div class="security-item">Be cautious of phishing attempts</div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <h3>Account Recovery</h3>
+                <p>Lost access to your account?</p>
+                <div class="security-tips">
+                    <div class="security-item">Use the account recovery form</div>
+                    <div class="security-item">Have your verification email ready</div>
+                    <div class="security-item">Provide necessary identification</div>
+                    <div class="security-item">Contact support if needed</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title" style="font-size: 1.5rem;">Account FAQs</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I reset my password?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Click on "Forgot Password" on the login page, enter your email address, and follow the instructions sent to your email to reset your password.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How can I enable two-factor authentication?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Go to your account settings, select "Security", and follow the instructions to set up two-factor authentication using an authenticator app or SMS.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What should I do if my account is hacked?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Immediately contact our support team at gamelooindia@gmail.com. We'll help you secure your account and investigate the unauthorized access.
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-support">
+            <button class="contact-button" onclick="window.location.href='support.html'">Need More Help?</button>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const span = question.querySelector('span');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
